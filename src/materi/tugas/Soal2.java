@@ -14,21 +14,24 @@ public class Soal2 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        int bil, banyak, a, digit;
+        int bil, banyak, a, digit, b;
         Scanner input = new Scanner(System.in);
         System.out.println("Inputkan Bilangan Bulat Positif = ");
         bil = input.nextInt();
         banyak = 0;
         digit = 0;
+        b = 1;
         if (bil >= 100000 && bil <= 999999) {
             for (int i = 1; i <= 6; i++) {
-                a = bil % 10;
+                //a = bil % 10;
+                a = (bil/b)%10;
                 if (a % 2 == 0) {                    
                     banyak++;
                     System.out.print(a);
                 }else {
                 }
-                bil /= 10;
+                //bil /= 10;
+                b *= 10;
             }
             System.out.println("");
             //System.out.println(digit);
